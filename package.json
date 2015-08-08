@@ -9,7 +9,6 @@
   "author": "Pablo Parga",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.1.44",
     "control.async": "^0.5.2",
     "dynamodb-doc": "^1.0.0"
   }
