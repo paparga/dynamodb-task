@@ -1,6 +1,6 @@
 {
   "name": "dynamodb-task",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Foltktale Task wraper for dynamodb-doc",
   "main": "index.js",
   "scripts": {
