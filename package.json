@@ -1,6 +1,6 @@
 {
   "name": "dynamodb-task",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Ramda-fantasy Future wraper for dynamodb-doc",
   "main": "index.js",
   "scripts": {
