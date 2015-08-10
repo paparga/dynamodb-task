@@ -1,7 +1,8 @@
 'use strict';
 
 var DOC = require('dynamodb-doc');
-var Async = require('control.async')
+var Task = require('data.task');
+var Async = require('control.async')(Task);
 
 module.exports = Dyno;
 
