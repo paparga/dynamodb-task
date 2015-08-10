@@ -1,8 +1,6 @@
 'use strict';
 
-var DOC = require('dynamodb-doc');
 var Task = require('data.task');
-var Async = require('control.async')(Task);
 
 module.exports = Dyno;
 
@@ -22,20 +20,25 @@ var dynoMethods = [
   'updateTable'
 ];
 
-var dynoHelpers = ['BinToStr','Set','Condition','StrToBin'];
+function  _taskify(resolve,reject){
+  return function(err,data){
+    if (err) {
+      reject(err);
+    }else{
+      resolve(data);
+    }
+  };
+};
 
 
-function Dyno(awsClient) {
-  var dyno = {};
-  var docClient = new DOC.DynamoDB(awsClient);
-
+function Dyno(docClient) {
   dynoMethods.forEach(function (method) {
-    dyno[method] = Async.liftNode(docClient[method]);
+    docClient[method+"Task"] = function(params){
+      return new Task(function(reject,resolve){
+        docClient[method](params,_taskify(resolve,reject));
+      });
+    }
   });
 
-  dynoHelpers.forEach(function (helper) {
-    dyno[helper] = docClient[helper];
-  });
-
-  return dyno;
+  return docClient;
 }

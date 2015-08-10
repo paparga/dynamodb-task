@@ -9,8 +9,6 @@
   "author": "Pablo Parga",
   "license": "ISC",
   "dependencies": {
-    "control.async": "^0.5.2",
-    "data.task": "^3.0.0",
-    "dynamodb-doc": "^1.0.0"
+    "data.task": "^3.0.0"
   }
 }
