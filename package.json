@@ -1,7 +1,7 @@
 {
   "name": "dynamodb-task",
   "version": "0.1.5",
-  "description": "Foltktale Task wraper for dynamodb-doc",
+  "description": "Ramda-fantasy Future wraper for dynamodb-doc",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,6 @@
   "author": "Pablo Parga",
   "license": "ISC",
   "dependencies": {
-    "data.task": "^3.0.0"
+    "ramda-fantasy": "^0.3.0"
   }
 }

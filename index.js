@@ -1,6 +1,6 @@
 'use strict';
 
-var Task = require('data.task');
+var Future = require('ramda-fantasy').Future;
 
 module.exports = Dyno;
 
@@ -33,8 +33,8 @@ function  _taskify(resolve,reject){
 
 function Dyno(docClient) {
   dynoMethods.forEach(function (method) {
-    docClient[method+"Task"] = function(params){
-      return new Task(function(reject,resolve){
+    docClient[method+"Async"] = function(params){
+      return new Future(function(reject,resolve){
         docClient[method](params,_taskify(resolve,reject));
       });
     }
