@@ -1,6 +1,6 @@
 {
   "name": "dynamodb-task",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Ramda-fantasy Future wraper for dynamodb-doc",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "Pablo Parga",
   "license": "ISC",
   "dependencies": {
-    "ramda-fantasy": "^0.3.0"
+    "ramda-fantasy": "^0.4.0"
   }
 }

@@ -5,19 +5,14 @@ var Future = require('ramda-fantasy').Future;
 module.exports = Dyno;
 
 var dynoMethods = [
-  'batchGetItem',
-  'batchWriteItem',
-  'createTable',
-  'deleteItem',
-  'deleteTable',
-  'describeTable',
-  'getItem',
-  'listTables',
-  'putItem',
+  'batchGet',
+  'batchWrite',
+  'delete',
+  'get',
+  'put',
   'query',
   'scan',
-  'updateItem',
-  'updateTable'
+  'update'
 ];
 
 function  _taskify(resolve,reject){
